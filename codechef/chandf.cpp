@@ -33,9 +33,9 @@ int main(){
             continue;
         }
         ull z=0;
-        int i=0;
-        int count=0;
-        while(i<=63){
+        int i=50;
+        int count=50;
+        while(i>=0){
             if(((x>>i)&1)==1 || ((y>>i)&1)==1){
                 ull temp = (z|(1<<i)); // case 2
                 if(temp<=r){
@@ -52,10 +52,10 @@ int main(){
 
     3 cases
     z is greater than r
-    z is in better l and r
+    z is in between l and r
     z is  less than l
 */
-        cout<<z<<endl;
+        cout<<(x|y)<<endl;
     }
 }
 
