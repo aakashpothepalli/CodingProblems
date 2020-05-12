@@ -27,7 +27,7 @@ int main(){
         ull x,y,l,r;cin>>x>>y>>l>>r;
         
         // cout<<endl;
-        // testbit(x,y,l,r);
+        testbit(x,y,l,r);
         if(x==0 || y==0){
             cout<<0<<endl;
             continue;
@@ -38,24 +38,32 @@ int main(){
         while(i>=0){
            
             if((r>>i)&1 ==1 ){
-                i--;
-                break;
-            }else{
                
+                break;
             }
             i--;
         }
         while(i>=0){
-             if(((x>>i)&1)==1 || ((y>>i)&1)==1){
-                ull temp = (z|(1<<i)); // case 2
-                if(temp<=r){
-                    z = temp;
+             if( ((x|y)>>i)&1 ==1  ){
+                z = z | (1LL<<(i));
+            }
+            i--;
+        }
+        if(z>r){
+            int j=0;
+            while(j<=50){
+                if( (z>>j)&1 == 1){
+                    ull temp= z& ~(1LL<<j);
+                    if(temp<r){
+                        z = temp;
+                        break;
+                    }
                 }
+                j++;
             }
         }
+      
    
-        ull mx =0;
-
 /*
 
     3 cases
