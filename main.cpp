@@ -8,71 +8,7 @@ using namespace std;
 
 
 
-int testbit(ull x, ull y , ull l, ull r){
-       unsigned ll mx = 0;
-       unsigned ll z=0;
-
-       for(unsigned ll i=l;i<=r;i++){
-           if(mx < (x&i)*(y&i)){
-//               cout<<mx<<"- mx "<<i<<endl;
-               mx = (x&i)*(y&i);
-               z = i;
-           }
-       }
-       cout<<z<<endl;
-}
 int main(){
-    int t;cin>>t;
-    while(t--){
-        ull x,y,l,r;cin>>x>>y>>l>>r;
-        
-        // cout<<endl;
-        testbit(x,y,l,r);
-        if(x==0 || y==0){
-            cout<<0<<endl;
-            continue;
-        }
-        ull z=0;
-        int i=50;
+    int n;cin>>n;
 
-        while(i>=0){
-           
-            if((r>>i)&1 ==1 ){
-               
-                break;
-            }
-            i--;
-        }
-        while(i>=0){
-             if( ((x|y)>>i)&1 ==1  ){
-                z = z | (1LL<<(i));
-            }
-            i--;
-        }
-        if(z>r){
-            int j=0;
-            while(j<=50){
-                if( (z>>j)&1 == 1){
-                    ull temp= z& ~(1LL<<j);
-                    if(temp<r){
-                        z = temp;
-                        break;
-                    }
-                }
-                j++;
-            }
-        }
-      
-   
-/*
-
-    3 cases
-    z is greater than r
-    z is in between l and r
-    z is  less than l
-*/
-        cout<<z<<endl;
-    }
 }
-
-

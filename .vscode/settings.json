@@ -1,4 +1,8 @@
 {
     "git.ignoreLimitWarning": true,
-    "debug.node.autoAttach": "off"
+    "debug.node.autoAttach": "off",
+    "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp"
+    }
 }
