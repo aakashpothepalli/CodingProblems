@@ -24,7 +24,7 @@ int knapsack(int w[],int val[],int s,int n){
     for(int i=0;i<=s;i++){
         t[0][i]=0;
     }
-
+    int finalW = 0;
     for(int i=1;i<=n;i++){
         for (int j=1;j<=s;j++){
             if(w[i-1]>j)
@@ -34,6 +34,7 @@ int knapsack(int w[],int val[],int s,int n){
             }
         }
     }
+
 
     // cout<<t[n][s]<<endl;
     // if(tb[n][s]!=-1){
