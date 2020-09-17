@@ -21,7 +21,7 @@
 using namespace std;
 typedef  pair<int, int> pi ;
 
-// subset sum 
+// coin change dp weight
 int main(){
 
     int t;cin>>t;
