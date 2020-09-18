@@ -21,6 +21,12 @@
 using namespace std;
 typedef  pair<int, int> pi ;
 
+// matrix chain multiplication mcm operations addition multiplication 
+
+/*
+ * 1
+ * 5*3+2*6
+*/
 ll tbmx[100][100],tbmn[100][100];
 ll solveMin(vector<int> ar,vector<char> oper , int i ,int j){
     if(i==j){
@@ -37,7 +43,6 @@ ll solveMin(vector<int> ar,vector<char> oper , int i ,int j){
             ll suff = solveMin(ar,oper,k+1,j);
             
             char op = oper[k];
-            // cout<<i<<" "<<j<<" "<<pref<<" "<<op<<" "<<suff<<endl;
 
             if(op=='+'){
                 ans = min(ans,pref+suff);
@@ -64,7 +69,6 @@ ll solveMax(vector<int> ar,vector<char> oper , int i ,int j){
             ll suff = solveMax(ar,oper,k+1,j);
             
             char op = oper[k];
-            // cout<<i<<" "<<j<<" "<<pref<<" "<<op<<" "<<suff<<endl;
 
             if(op=='+'){
                 ans = max(ans,pref+suff);
