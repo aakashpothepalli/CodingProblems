@@ -7,8 +7,6 @@
 #define set(ar,n,val) for(int i=0;i<n;i++)ar[i]=val
 using namespace std;
 
-
-
 string longestPalindrome(string s) {
     
     string ans ="";
