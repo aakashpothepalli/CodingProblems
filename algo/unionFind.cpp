@@ -1,6 +1,8 @@
 struct edge{
     int a,b,w;
 };
+edge arr[25000001];
+// union find algo
 bool comp(edge a,edge b){
     // maximum spanning tree
     if(a.w >b.w){
@@ -9,8 +11,7 @@ bool comp(edge a,edge b){
     }
     return false;
 }
-ll par[5001];
-edge arr[25000001];
+ll par[100001];
 
 ll find (ll a){
     if(par[a]<0){

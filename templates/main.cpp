@@ -16,10 +16,15 @@
 #define set(ar,n,val) for(int i=0;i<n;i++)ar[i]=val
 #define for2d(n,m) for(int i=0;i<n;i++)for(int j=0;j<m;j++)
 #define minar(ar,n,mn) for(int i=0;i<n;i++)mn =min(mn,ar[i])
+#define maxar(ar,n,mx) for(int i=0;i<n;i++)mx =max(mx,ar[i])
+
+#define fori(i,a,b) for(ll i=a;i<b;++i)
+
 using namespace std;
 typedef  pair<int, int> pi ;
 typedef pair<ll,ll> pl;
-
+typedef vector<vector<int>> vvi;
+const ll mod = 1e9 + 7;
 int main(){
     // int t;cin>>t;
     // while(t--){
