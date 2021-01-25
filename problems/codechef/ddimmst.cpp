@@ -56,7 +56,6 @@ int main(){
 
     int count = 0;
 
-    //n^2 * d.. have to optimise
     for(int i =0;i<n;i++){
         for(int j=i+1;j<n;j++){
                 ll difsum =0;

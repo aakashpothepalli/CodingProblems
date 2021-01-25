@@ -1,4 +1,4 @@
-void findDivisors(ll n ){
+void findPrimeFactors(ll n ){
     ll ans = n;
     // m stores the powers of prime factors
      unordered_map<ll,ll> m ;

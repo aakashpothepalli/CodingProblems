@@ -11,3 +11,13 @@ vector<int> randAr(int seed,int size){
    return ar;
 
 }
+
+int ar[100000];
+void randAr(int ar[],int seed,int size){
+   srand(seed);
+   for(int i=0;i<size;i++){
+     int ran = rand()%size;
+     ar[i] = (ran);
+   }
+
+}
