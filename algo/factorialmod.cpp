@@ -1,6 +1,6 @@
-// fac factorial mod algo
-
-int power(ll x, ll y, ll p)  {  
+// ncr factorial mod 
+long long mod = 1e9+7;
+int power(long long x, long long y, long long p)  {  
     int res = 1; 
     x = x % p;
     if (x == 0) return 0;
@@ -13,15 +13,15 @@ int power(ll x, ll y, ll p)  {
     return res;  
 } 
 
-ll fact[100000];
-void factmod(int n , int p ){
+long long fact[100000];
+void factmod(long long n , long long p ){
     fact[0] =1 ;
-    for(ll i= 1;i<=n;i++){
+    for(long long i= 1;i<=n;i++){
         fact[i] = ((fact[i-1]%p)*(i%p))%p;
     }
 }
 
-ll C(ll n, ll r){
+long long ncr(long long n, long long r){
     return ( fact[n]%mod * power(fact[n-r],mod -2,mod)%mod * power(fact[r],mod-2,mod)%mod )%mod;
 }
 

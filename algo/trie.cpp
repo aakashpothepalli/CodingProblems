@@ -13,17 +13,14 @@ typedef vector<vector<int>> vvi;
 const ll mod = 1e9 + 7;
 
 int main(){
-    int t;cin>>t;
-    while(t--){
+    // int t;cin>>t;
+    // while(t--){
         int n;cin>>n;
         ll ar[n];
         in(ar,n);
         
-    }
+    // }
 
-    // int n;cin>>n;
-    // ll ar[n];
-    // in(ar,n);
 }
 
 /*

@@ -1,6 +1,6 @@
-ll largePower(unsigned ll x, unsigned int y, int p)  
+long long largePower(unsigned long long x, unsigned int y, int p)  
 {  
-    ll r= 1;
+    long long r= 1;
     x = x % p; 
     if (x == 0) return 0;
   

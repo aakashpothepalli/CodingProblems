@@ -7,7 +7,7 @@
 using namespace std;
 
 
-ll gcd(ll a, ll b){
+long long gcd(long long a, long long b){
     if (b == 0) {
         return a;
     }
